@@ -37,22 +37,24 @@
                 android:layout_width="240dp"
                 android:layout_height="240dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="15dp"
                 android:background="#FFFFFF" />
 
             <TextView
+                android:id="@+id/tv_main_song_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="15dp"
                 android:text="歌曲正在加载中请稍等"
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/tv_main_singer_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="15dp"
                 android:text="歌手信息正在加载中请稍等" />
 
         </LinearLayout>
@@ -60,7 +62,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-
             android:layout_weight="4">
 
             <ImageView

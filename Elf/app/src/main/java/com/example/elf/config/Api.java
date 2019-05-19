@@ -19,5 +19,5 @@ public class Api {
     public static final String getSongFilePr = "http://music.163.com/song/media/outer/url?id=";
     public static final String getSongFileSu = ".mp3";
     //获取歌词
-    public static final String getLyric = "http://elf.egos.hosigus.com/music/lyric?id:";
+    public static final String getLyric = "http://elf.egos.hosigus.com/music/lyric?id=";
 }

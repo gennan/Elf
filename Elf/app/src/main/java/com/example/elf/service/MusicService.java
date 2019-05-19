@@ -59,6 +59,8 @@ public class MusicService extends Service {
         public void callSeekToPos(int pos) {
             seekToPos(pos);
         }
+
+
     }
 
     /**
@@ -99,26 +101,26 @@ public class MusicService extends Service {
      * 更新进度条
      */
     private void updateSeekBar() {
-//获取总时长
-        final int duration = mediaPlayer.getDuration();
+
         new Thread() {
             @Override
             public void run() {
                 while (keepTrue) {
                     try {
                         Thread.sleep(1000);
-                    } catch (InterruptedException e) {
+                        int currentPosition = mediaPlayer.getCurrentPosition();
+                        //获取总时长
+                        int duration = mediaPlayer.getDuration();
+                        //发送数据给activity
+                        Message message = Message.obtain();
+                        Bundle bundle = new Bundle();
+                        bundle.putInt("duration", duration);
+                        bundle.putInt("currentPosition", currentPosition);
+                        message.setData(bundle);
+                        SongDetailActivity.handler.sendMessage(message);
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
-                    int currentPosition = mediaPlayer.getCurrentPosition();
-                    //发送数据给activity
-                    Message message = Message.obtain();
-                    Bundle bundle = new Bundle();
-                    bundle.putInt("duration", duration);
-                    bundle.putInt("currentPosition", currentPosition);
-                    message.setData(bundle);
-                    SongDetailActivity.handler.sendMessage(message);
-
                 }
             }
         }.start();
