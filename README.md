@@ -8,4 +8,8 @@
 
 |播放 暂停 上一首 下一首 进度拖拽|欢迎界面 日推界面|
 |---|---|
-|||
+|<img src="Elf/gif/play.gif">|<img src="Elf/gif/main.gif">|
+
+## 安装包
+
+屏幕适配做的很差 就打包两个安装包分别给[相对偏大一些](https://github.com/Gennan/AndroidHalfExamAssessment/blob/master/Elf/release/elf_large.apk)和[相对偏小一些](https://github.com/Gennan/AndroidHalfExamAssessment/blob/master/Elf/release/elf_small.apk)的屏幕的使用
